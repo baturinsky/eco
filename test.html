@@ -1,0 +1,13 @@
+<canvas id="C"></canvas>
+<script>
+let seed=0;
+const R = (max=1)=> Math.sin(++seed)*21e5%1*max
+let c = C.getContext("2d");
+for(i=0;i<45000;i++){
+  c.fillStyle=`rgba(0,0,0,${R(100)/100})`;
+  //c.fillStyle=`rgba(${R(256)},${R(256)},${R(256)},1)`;
+  c.fillRect(i%300,~~(i/300),1,1);
+}  
+</script>
+
+
